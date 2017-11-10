@@ -39,6 +39,7 @@ public class StudentController {
         return ResponseEntity.ok(students);
     }
 
+    @CrossOrigin
     @GetMapping("student/{id}")
     public ResponseEntity getStudent(@PathVariable("id")long id){
         Student student = studentService.findById(id);
